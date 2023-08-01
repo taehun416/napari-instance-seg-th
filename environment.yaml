@@ -1,0 +1,6 @@
+name: napari_dev
+channels:
+  - conda-forge
+dependencies:
+  - napari
+  - devbio-napari

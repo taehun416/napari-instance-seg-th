@@ -1,0 +1,10 @@
+nbs/*
+.vscode
+.napari-hub
+.github
+sample_dataset
+*/_pycache_/*
+*/_tests/*
+*.pyc
+.cache/*
+.cache/napari-SAM4IS/sam_vit_h_4b8939.pth

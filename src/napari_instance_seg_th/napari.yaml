@@ -1,0 +1,37 @@
+name: napari-instance-seg-th
+display_name: Instance-segmentation-battery
+contributions:
+  commands:
+    - id: napari-instance-seg-th.get_reader
+      python_name: napari_instance_seg_th._reader:napari_get_reader
+      title: Open Ground Truth tracking challenge segmentation data
+    - id: napari-instance-seg-th.write_multiple
+      python_name: napari_instance_seg_th._writer:write_multiple
+      title: Save multi-layer data with Instance-segmentation-battery
+    - id: napari-instance-seg-th.write_single_image
+      python_name: napari_instance_seg_th._writer:write_single_image
+      title: Save image data with Instance-segmentation-battery
+    - id: napari-instance-seg-th.make_qwidget
+      python_name: napari_instance_seg_th._widget:SegmentationDiffHighlight
+      title: Make example QWidget
+    - id: napari-instance-seg-th.make_magic_widget
+      python_name: napari_instance_seg_th._widget:segment_by_threshold
+      title: Make segmentation by thredshold widget
+
+  readers:
+    - command: napari-instance-seg-th.get_reader
+      accepts_directories: true
+      filename_patterns: []
+  writers:
+    - command: napari-instance-seg-th.write_multiple
+      layer_types: ['image*','labels*']
+      filename_extensions: []
+    - command: napari-instance-seg-th.write_single_image
+      layer_types: ['image']
+      filename_extensions: ['.npy']
+  widgets:
+    - command: napari-instance-seg-th.make_qwidget
+      display_name: Example QWidget
+    - command: napari-instance-seg-th.make_magic_widget
+      display_name: Segment by Thredshold
+
