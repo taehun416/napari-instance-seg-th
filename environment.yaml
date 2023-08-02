@@ -2,5 +2,11 @@ name: napari_dev
 channels:
   - conda-forge
 dependencies:
-  - napari
+  - napari=0.4.18
   - devbio-napari
+  - dask
+  - magicgui
+  - qtpy=2.3.1
+
+  - pip:
+    - numpy

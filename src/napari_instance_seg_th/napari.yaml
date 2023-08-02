@@ -13,7 +13,7 @@ contributions:
       title: Save image data with Instance-segmentation-battery
     - id: napari-instance-seg-th.make_qwidget
       python_name: napari_instance_seg_th._widget:SegmentationDiffHighlight
-      title: Make example QWidget
+      title: Make Segmentation DiffHighlight
     - id: napari-instance-seg-th.make_magic_widget
       python_name: napari_instance_seg_th._widget:segment_by_threshold
       title: Make segmentation by thredshold widget
@@ -31,7 +31,7 @@ contributions:
       filename_extensions: ['.npy']
   widgets:
     - command: napari-instance-seg-th.make_qwidget
-      display_name: Example QWidget
+      display_name: SegmentationDiffHighlight
     - command: napari-instance-seg-th.make_magic_widget
       display_name: Segment by Thredshold
 
