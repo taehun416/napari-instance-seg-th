@@ -5,12 +5,9 @@ contributions:
     - id: napari-instance-seg-th.get_reader
       python_name: napari_instance_seg_th._reader:napari_get_reader
       title: Open Ground Truth tracking challenge segmentation data
-    - id: napari-instance-seg-th.write_multiple
-      python_name: napari_instance_seg_th._writer:write_multiple
-      title: Save multi-layer data with Instance-segmentation-battery
     - id: napari-instance-seg-th.write_single_image
       python_name: napari_instance_seg_th._writer:write_single_image
-      title: Save image data with Instance-segmentation-battery
+      title: Save label with Instance-segmentation-battery
     - id: napari-instance-seg-th.make_qwidget
       python_name: napari_instance_seg_th._widget:SegmentationDiffHighlight
       title: Make Segmentation DiffHighlight
@@ -23,12 +20,9 @@ contributions:
       accepts_directories: true
       filename_patterns: []
   writers:
-    - command: napari-instance-seg-th.write_multiple
-      layer_types: ['image*','labels*']
-      filename_extensions: []
     - command: napari-instance-seg-th.write_single_image
-      layer_types: ['image']
-      filename_extensions: ['.npy']
+      layer_types: ['labels*']
+      filename_extensions: ['.zip']
   widgets:
     - command: napari-instance-seg-th.make_qwidget
       display_name: SegmentationDiffHighlight
